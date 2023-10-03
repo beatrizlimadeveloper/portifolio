@@ -1,0 +1,39 @@
+@import '../abstract/variaveis';
+
+.sobre-mim{
+    padding: 1rem 1rem;
+
+    background-color: $cor-de-fundo-azul;
+
+    .sobre-mim__titulo{
+        @include padrao-h2;
+    }
+
+    .sobre-mim__descricao{
+        padding: 0.5rem 0;
+    }
+   
+}
+
+@media screen and (min-width: 768px) {
+    .sobre-mim{
+        padding: 1rem 2rem;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .sobre-mim{
+        padding: 3rem 9.5rem 3rem;
+        
+            .sobre-mim__titulo{
+                font-size: 2rem;
+                padding: 1rem 0;
+            }
+        
+            .sobre-mim__descricao{
+                padding: 1rem 0;
+            }
+    }
+}
+
+

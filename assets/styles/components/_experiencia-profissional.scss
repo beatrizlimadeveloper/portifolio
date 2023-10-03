@@ -1,0 +1,83 @@
+@import '../abstract/variaveis';
+
+.experiencia-profissional{
+    padding: 2rem 2rem;
+    background-color: $cor-de-fundo-gelo;
+    height: fit-content;
+    
+    .experiencia__titulo{
+        @include padrao-h2;
+        padding-bottom: 1.5rem;
+        text-align: center;
+    }
+
+    .experiencia__div-principal{
+
+        line-height: 1.5rem;
+        .experiencia__iamgem{
+            width: 100%;
+            box-shadow: 2px 3px 6px grey;
+        }
+
+        .experiencia__titulo-desafio{
+            font-weight: 700;
+        }
+
+        .experiencia__descricao{
+            font-size: 14px;
+        }
+
+        .experiencia__div-secundaria{
+            margin: 1rem 0;
+            .experiencia__link {
+                text-decoration: none;
+                padding: 0.6rem 0.4rem;
+                margin: 0 0.5rem 0 0;
+                
+                
+            }
+            
+            .repositorio{
+                border: 1px solid #2A7AE4;;
+                color: #2A7AE4;
+                background-color: white;
+                box-shadow: 4px 4px 7px 2px rgb(152, 149, 149);;
+                &:hover{
+                    background-color: rgb(215, 211, 211);
+                    transition: .3s ease-in;
+                }
+                
+            }
+
+            .deploy{
+                color: white;
+                background-color: #2A7AE4;
+                box-shadow: 4px 4px 7px 2px rgb(152, 149, 149);
+                &:hover{
+                    background-color: #064598;
+                    transition: .3s ease-in;
+                }
+            }
+         
+        } 
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .experiencia-profissional{
+        padding: 2rem 9.5rem;
+
+        .experiencia__titulo{
+           font-size: 2rem;
+           margin: 1rem 0;
+
+        }
+        .experiencia__div-principal{
+            display: grid;
+            grid-template-columns: 1.5fr 0.5fr;
+            align-items: center;
+            gap: 1rem;
+
+        }
+    }
+}

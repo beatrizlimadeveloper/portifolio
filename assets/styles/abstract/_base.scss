@@ -1,0 +1,49 @@
+@import './variaveis';
+
+html, body{
+    font-family: $fonte;   
+    color: #464646;
+}
+
+body{
+    box-sizing: border-box;
+
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+//função para padronizar o título
+
+.cabecalho, .formacao-academica, .experiencia-profissional, .contato, footer{
+    padding: 1rem 1rem;
+}
+
+.skills-e-hobbies{
+    padding: 1rem 0rem 1rem 1.2rem;
+}
+
+@mixin padrao-h2{
+    font-size: $titulo-nome;
+    font-weight: $peso-titulo;
+}
+
+@media screen and (min-width: 768px) {
+    .cabecalho, .introducao, .sobre-mim,  .formacao-academica, .experiencia-profissional, .contato, .rodape{
+        padding: 1rem 2rem;
+    }
+
+    .skills-e-hobbies{
+        padding: 1rem 1rem 1rem 2rem;
+    }
+
+}
+
+@media screen and (min-width: 1440px) {
+    .cabecalho, .introducao, .sobre-mim, .skills-e-hobbies, .formacao-academica, .experiencia-profissional, .contato, .rodape{
+        padding: 2rem 9.5rem 4rem;
+    }
+
+}
+

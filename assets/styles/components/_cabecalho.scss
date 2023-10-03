@@ -1,0 +1,91 @@
+@import '../abstract/variaveis';
+
+.cabecalho{
+    background-color: $cor-de-fundo-gelo;
+
+    .nav__container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+    
+        .nav__titulo{
+            @include padrao-h2;
+            padding-bottom: 0.5rem;
+           
+
+            &::before{
+                content: url(../../../assets/img/icon/auto_awesome_black_24dp\ 1.svg);
+            }
+        }
+
+        .nav__lista{
+            
+            .lista-links{ 
+                display: none;
+                font-weight: 700;
+
+            }
+
+            .nav__email{
+                
+                .link-p{
+                    text-decoration: none;
+                    color: black;
+
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+
+    .cabecalho{
+        .nav__container{
+            .nav__lista{
+                display: flex;
+                gap: 2rem;
+
+                .lista-links{
+                    display: flex;
+                    justify-content: flex-end;
+                    gap: 2rem;
+
+                    .lista-item{
+                        .link-item{
+                            text-decoration: none;
+                            font-weight: 500;
+                            color: black;
+
+                            &:hover{
+                                font-weight: 700;
+                                text-decoration: underline;
+                            }
+
+                            &:active{
+                                color: rgb(103, 68, 68);
+                            }
+
+                        }
+                    }
+                }
+
+                .nav__email{
+                    .link-p{
+                        text-decoration: none;
+                        color: black;
+
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }   
+}

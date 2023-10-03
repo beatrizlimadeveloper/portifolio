@@ -1,0 +1,140 @@
+@import '../abstract/variaveis';
+
+.contato{
+    background-color: $cor-de-fundo-azul;
+    padding: 1rem 3rem 1rem 2rem;
+
+    .contato__img{
+        display: none;
+    }
+
+    .contato__titulo{
+        @include padrao-h2;
+    }
+
+    .contato__descricao{
+        padding: 1rem 0;
+        line-height: 1.2rem;
+    }
+
+    .contato__input{
+        display: block;
+        width: 100%;
+        height: 3rem;
+        margin: 8px auto;
+        border-radius: 0.3rem;
+        border: none;
+        padding: 0 0.5rem;
+        
+        &::placeholder{
+          padding: 0.3rem 0.3rem;
+          font-size: 12px;
+          color: #A2A2A2;
+          
+        }
+
+        &:focus{
+            box-shadow: 0 0 0 0;
+            outline: 0;
+            transition: .15s;
+            border-bottom: 3px solid #2A7AE4;
+        }
+
+        &:focus::placeholder{
+            // para quando tiver foco e ser no placeholder
+            color: #2A7AE4;
+            font-weight: 500;
+        }
+    }
+
+    .contato__textarea{
+        display: block;
+        width: 100%;
+        margin: 8px auto;
+        border-radius: 0.3rem;
+        border: none;
+        padding: 0.4rem 0.5rem;
+
+        &::placeholder{
+            padding: 0.5rem 0.2rem; 
+            font-size: 12px;
+            color: #A2A2A2;
+        }
+
+        &:focus{
+            box-shadow: 0 0 0 0;
+            outline: 0;
+            border-bottom: 3px solid #2A7AE4;
+
+        }
+
+        &:focus::placeholder{
+            color: #2A7AE4;
+            font-weight: 500;
+            
+        }
+    }
+
+    .contato__button{
+        color: white;
+        background-color: #2A7AE4;
+        margin-top: 8px;
+        width: 8rem;
+        height:3rem;
+
+        &:active{
+            background-color: #054599;
+        }
+    }
+
+    .mensagem-erro {
+        color: red;
+        font-size: 0.7rem;
+    }
+
+}
+
+
+
+@media screen and (min-width: 1440px) {
+    .contato{
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+
+       
+        .contato__titulo{
+        font-size: 2rem;
+        }
+        
+     
+        .contato__img{
+            display: block;
+        }
+        .contato__input{
+            margin-bottom: 5px;
+            padding: 0 12px;
+        }
+
+        .contato__textarea{
+            margin-bottom: 5px;
+        }
+        
+        .contato__button{
+            border: none;
+            margin-top: 32px;
+            &:hover{
+                cursor: pointer;
+                background-color: #1f5dad;
+                transition: .2s;
+
+            }
+
+            &:active{
+                background-color: #072c5c;
+            }
+        }
+    }
+    
+}

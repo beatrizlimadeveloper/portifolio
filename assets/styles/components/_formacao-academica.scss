@@ -1,0 +1,76 @@
+@import '../abstract/variaveis';
+
+.formacao-academica{
+    background-color: $cor-de-fundo-azul;
+    padding: 1rem 1rem;
+
+    .formacao-academica__titulo{
+        @include padrao-h2;
+        padding: 1rem 0;
+        text-align: center;
+    }
+
+    .formacao-academica__div-instituicao{
+        padding: 1rem 1.5rem;
+        line-height: 1.5rem;
+        
+        .div-instituicao__img{
+            width: 100%;
+        }
+
+        .div-instituicao__titulo{
+            
+            font-weight: 700;
+            
+        }
+
+        .div-instituicao__descricao{
+           
+            font-weight: 500;
+            
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    .formacao-academica{
+        .formacao-academica__div-container{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            .div-instituicao__img{
+                height: 150px;
+                width: 300px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+
+    .formacao-academica{
+        padding: 4rem 0;
+        .formacao-academica__titulo{
+            font-size: 2rem;
+        }
+        .formacao-academica__div-container{
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .div-instituicao__img{
+                height: 170px;
+                width: 310px;
+
+                &:hover{
+                    transform: scale(1.1);
+                    transition: .2s;
+                }
+            }
+        } 
+    }
+}
